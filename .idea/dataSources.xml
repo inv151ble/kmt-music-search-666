@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4255371665">
+    <data-source source="LOCAL" name="KMTDB" uuid="37ea6d12-d642-49a9-9a35-5d46f29bc17e">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:$PROJECT_DIR$/src/res/KMTDB</jdbc-url>
+      <user-name>admin</user-name>
+      <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

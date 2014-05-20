@@ -1,9 +1,7 @@
 import de.umass.lastfm.Artist;
 import de.umass.lastfm.Caller;
-
 import java.text.DateFormat;
 import java.util.Collection;
-
 public class KMTArtist extends Artist{
     //public static String Name;
     public static String[] artists1 = new String[5];

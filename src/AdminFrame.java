@@ -55,7 +55,7 @@ public class AdminFrame extends JFrame
         getContentPane().add(cancelButton);
 
 
-        setTitle("KMT Music search");
+        setTitle("KMT Music search options");
         setSize(340,200);
         setVisible(true);
         setResizable(true);
