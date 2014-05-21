@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.util.Collection;
 public class KMTArtist extends Artist{
     //public static String Name;
-    public static String[] artists1 = new String[5];
+    public static String[] artists1 = new String[KMTUser.getSearchDeph()];
     public static Collection<KMTArtist> similar;
     public static Collection<Artist> similar1;
    /* public KMTArtist()
@@ -21,7 +21,7 @@ public class KMTArtist extends Artist{
     public KMTArtist(Artist a) {
         super(a.getName(), a.getUrl());
         int i=0;
-        similar1=Artist.getSimilar(this.getName(), 5, Main1.key);
+        similar1=Artist.getSimilar(this.getName(), KMTUser.getSearchDeph(), Main1.key);
         for (Artist artist : similar1) {
             artists1[i]=artist.getName();
             i++;

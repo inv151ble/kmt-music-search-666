@@ -2,6 +2,8 @@
   <library name="lastfm-java-0.1.2">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/lastfm-java-0.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/h2-1.4.178.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sqlitejdbc-v056.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

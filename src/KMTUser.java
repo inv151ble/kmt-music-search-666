@@ -6,6 +6,35 @@ public class KMTUser {
     private static int searchDeph;
     private static int historySize;
     private static boolean searchRigor;
+    private static int midSearchDeph;
+    private static int midHistorySize;
+    private static boolean midSearchRigor;
+    public static int pk;
+
+    public static int getMidSearchDeph() {
+        return midSearchDeph;
+    }
+
+    public static void setMidSearchDeph(int midSearchDeph) {
+        KMTUser.midSearchDeph = midSearchDeph;
+    }
+
+    public static int getMidHistorySize() {
+        return midHistorySize;
+    }
+
+    public static void setMidHistorySize(int midHistorySize) {
+        KMTUser.midHistorySize = midHistorySize;
+    }
+
+    public static boolean isMidSearchRigor() {
+        return midSearchRigor;
+    }
+
+    public static void setMidSearchRigor(boolean midSearchRigor) {
+        KMTUser.midSearchRigor = midSearchRigor;
+    }
+
     private static String fileName = "src/res/settings.properties";
 
 
@@ -40,9 +69,9 @@ public KMTUser() {
         try {
             output = new FileOutputStream(fileName);
             // Устанавливаем  [поле]        [значение]
-            prop.setProperty("searchDeph", Integer.toString(searchDeph));
-            prop.setProperty("historySize", Integer.toString(historySize));
-            prop.setProperty("searchRigor", Boolean.toString(searchRigor));
+            prop.setProperty("searchDeph", Integer.toString(midSearchDeph));
+            prop.setProperty("historySize", Integer.toString(midHistorySize));
+            prop.setProperty("searchRigor", Boolean.toString(midSearchRigor));
 
             prop.store(output, null);
         } catch (IOException io) {

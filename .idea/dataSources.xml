@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4255371665">
+  <component name="DataSourceManagerImpl" format="xml" hash="171966495">
     <data-source source="LOCAL" name="KMTDB" uuid="37ea6d12-d642-49a9-9a35-5d46f29bc17e">
       <driver-ref>h2.embedded</driver-ref>
       <synchronize>true</synchronize>
@@ -8,6 +8,26 @@
       <jdbc-url>jdbc:h2:file:$PROJECT_DIR$/src/res/KMTDB</jdbc-url>
       <user-name>admin</user-name>
       <user-password>dfcbdfcedfc7dfc3dfc4</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="db" uuid="bc60dc50-f725-4f23-a1e9-d3b3f066b32e">
+      <driver-ref>h2.embedded</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:C:/db/DB</jdbc-url>
+      <schema-pattern>DB.PUBLIC</schema-pattern>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="DB.h2" uuid="0a20a050-aa40-4ffa-a173-cb33efa19641">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:C:\db\DB</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="DB.h2 [2]" uuid="50703059-161c-4648-8004-7b7f612b4469">
+      <driver-ref>h2.embedded</driver-ref>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:C:\db\DB</jdbc-url>
       <libraries />
     </data-source>
   </component>

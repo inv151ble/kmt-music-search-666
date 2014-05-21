@@ -5,16 +5,11 @@ public class KMTQuery {
    public static KMTArtist testA;
     public KMTQuery(){
         uArtName = (WindowFrame.userArtistName).getText();
-        uPop = (WindowFrame.userPopularity).getSelectedItem();
+       // uPop = (WindowFrame.userPopularity).getSelectedItem();
         uTag = (WindowFrame.userTag).getText();
         Artist testA1 = Artist.search(uArtName,Main1.key).iterator().next();
         testA = new KMTArtist(testA1);
-       /*for (String artist : testA.artists1) {
-            WindowFrame.userOut.setText(artist);
-        }*/
-       /* for(int i = 0;i<5; i++){
-        WindowFrame.userOut[i].setText(testA.artists1[i]);
-        }*/
+        SearchHist b = new SearchHist();
 
     KMTResult userResult = new KMTResult();
     }

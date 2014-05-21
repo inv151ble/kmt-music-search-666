@@ -1,0 +1,51 @@
+05-20 22:22:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Столбец "id" не найден
+Column "id" not found; SQL statement:
+ALTER TABLE PUBLIC.SEARCH_HISTORY ADD PRIMARY KEY ("id") [42122-175]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:332)
+	at org.h2.message.DbException.get(DbException.java:172)
+	at org.h2.message.DbException.get(DbException.java:149)
+	at org.h2.table.Table.getColumn(Table.java:626)
+	at org.h2.table.IndexColumn.mapColumns(IndexColumn.java:75)
+	at org.h2.command.ddl.AlterTableAddConstraint.tryUpdate(AlterTableAddConstraint.java:104)
+	at org.h2.command.ddl.AlterTableAddConstraint.update(AlterTableAddConstraint.java:70)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:253)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:128)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:113)
+	at com.intellij.persistence.jdbc.impl.RemoteStatementImpl.executeUpdate(RemoteStatementImpl.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:556)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:811)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:670)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+05-20 22:36:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "SEARCH_HISTORY" не найдена
+Table "SEARCH_HISTORY" not found; SQL statement:
+SELECT * FROM SEARCH_HISTORY [42102-178]
+05-20 22:38:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "SEARCH_HISTORY" не найдена
+Table "SEARCH_HISTORY" not found; SQL statement:
+SELECT * FROM SEARCH_HISTORY [42102-178]
+05-20 22:39:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "SEARCH_HISTORY" не найдена
+Table "SEARCH_HISTORY" not found; SQL statement:
+SELECT * FROM KMTDB.PUBLIC.SEARCH_HISTORY [42102-178]
+05-20 22:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "SEARCH_HISTORY" не найдена
+Table "SEARCH_HISTORY" not found; SQL statement:
+SELECT * FROM KMTDB.PUBLIC.SEARCH_HISTORY [42102-178]
+05-20 22:46:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Синтаксическая ошибка в выражении SQL "ALTER TABLE PUBLIC.SEARCH_HISTORY RENAME TO PUBLIC.""serarch_hist"" DATABASE_TO_UPPER[*]=FALSE "
+Syntax error in SQL statement "ALTER TABLE PUBLIC.SEARCH_HISTORY RENAME TO PUBLIC.""serarch_hist"" DATABASE_TO_UPPER[*]=FALSE "; SQL statement:
+ALTER TABLE PUBLIC.SEARCH_HISTORY RENAME TO PUBLIC."serarch_hist" DATABASE_TO_UPPER=false [42000-175]

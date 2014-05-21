@@ -1,12 +1,13 @@
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class AdminFrame extends JFrame
 {
     static JTextField adminHistorySize;
     static JCheckBox adminSearchRegir;
     static JButton acceptButton;
     static JButton cancelButton;
+    static JButton clearButton;
     static JSlider adminSearchDeph;
     eHendler hendler = new eHendler();
 
@@ -21,7 +22,7 @@ public class AdminFrame extends JFrame
 
     void setupGUI()
     {
-        adminSearchDeph = new JSlider(JSlider.HORIZONTAL, 1, 5,KMTUser.getSearchDeph());
+        adminSearchDeph = new JSlider(JSlider.HORIZONTAL, 5, 10,KMTUser.getSearchDeph());
         adminSearchDeph.setMajorTickSpacing(1);
         adminSearchDeph.setPaintTicks(true);
         adminSearchDeph.setPaintLabels(true);
@@ -55,12 +56,20 @@ public class AdminFrame extends JFrame
         getContentPane().add(cancelButton);
 
 
+        clearButton = new JButton();
+        clearButton.setLocation(100,135);
+        clearButton.setSize(170,20);
+        clearButton.setText("Clear History");
+        getContentPane().add(clearButton);
+
+
         setTitle("KMT Music search options");
-        setSize(340,200);
+        setSize(340,210);
         setVisible(true);
         setResizable(true);
         acceptButton.addActionListener(hendler);
         cancelButton.addActionListener(hendler);
+        clearButton.addActionListener(hendler);
 
 
     }
@@ -76,13 +85,19 @@ public class AdminFrame extends JFrame
         public void actionPerformed(ActionEvent e) {
 
             if(e.getSource()==acceptButton){
-                KMTUser.setSearchDeph(adminSearchDeph.getValue());
-                KMTUser.setHistorySize(Integer.parseInt(adminHistorySize.getText()));
-                KMTUser.setSearchRigor(adminSearchRegir.isSelected());
+                KMTUser.setMidSearchDeph(adminSearchDeph.getValue());
+                KMTUser.setMidHistorySize(Integer.parseInt(adminHistorySize.getText()));
+                KMTUser.setMidSearchRigor(adminSearchRegir.isSelected());
                 KMTUser.saveSettings();
+
             }
 
             if(e.getSource()==cancelButton) dispose();
+
+            if(e.getSource()==clearButton) {
+            SearchHist.clearHist();
+            WindowFrame.userHistory.removeAllItems();
+            };
 
         }
     }

@@ -1,11 +1,11 @@
-import de.umass.lastfm.*;
+import de.umass.lastfm.Artist;
 import de.umass.lastfm.Caller;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Collection;
-import java.util.logging.Logger;
 
 /**
  * Created by Платон on 19.05.2014.
@@ -34,34 +34,19 @@ public class KMTApplet extends JApplet {
     void setupGUI()
     {
         userArtistName = new JTextField();
-        userArtistName.setLocation(20,20);
-        userArtistName.setSize(103,25);
+        userArtistName.setLocation(160,20);
+        userArtistName.setSize(220,30);
         userArtistName.setText("Artist name");
         userArtistName.setColumns(10);
         getContentPane().add(userArtistName);
 
-        userTag = new JTextField();
-        userTag.setLocation(160,20);
-        userTag.setSize(99,25);
-        userTag.setText("Tag");
-        userTag.setColumns(10);
-        getContentPane().add(userTag);
+
 
         searchButton = new JButton();
         searchButton.setLocation(160,80);
         searchButton.setSize(220,60);
         searchButton.setText("Search!");
         getContentPane().add(searchButton);
-
-        userPopularity = new Choice();
-        userPopularity.setLocation(280,20);
-        userPopularity.setSize(106,28);
-        getContentPane().add(userPopularity);
-
-        userHistory = new Choice();
-        userHistory.setLocation(416,20);
-        userHistory.setSize(106,30);
-        getContentPane().add(userHistory);
 
         setSize(600,480);
         setVisible(true);
@@ -70,7 +55,7 @@ public class KMTApplet extends JApplet {
             userOut[i] = new JTextField();
             userOut[i].setLocation(160, 200 + (i * 20));
             userOut[i].setSize(220, 20);
-            userOut[i].setText("Out");
+            userOut[i].setText("-");
             userOut[i].setColumns(10);
             getContentPane().add(userOut[i]);
         }
